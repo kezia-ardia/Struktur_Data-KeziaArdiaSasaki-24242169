@@ -1,0 +1,9 @@
+#tanggal_lahir = input("masukan tempat lahir anda") 
+#hasil = len("tempat_lahir") 
+#print(hasil) 
+
+password = input("masukan password anda") 
+if len(password) < 8:
+    print("karakter kurang") 
+else:
+    print("karakter cukup") 
