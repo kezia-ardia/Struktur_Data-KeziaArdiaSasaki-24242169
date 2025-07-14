@@ -1,34 +1,44 @@
-# FINAL PROJECT UAS - KELOMPOK 
+# FINAL PROJECT UAS - KELOMPOK
 # Anggota:
 # 1. Lencana (24241189)
 # 2. Kezia (24241169)
 
-def meet1_perbandingan_bolean():
-    print("Program Perbandingan (Boolean)")
-
+# Meet 1 - Perbandingan Boolean
+def meet1_perbandingan_boolean():
+    print("Perbandingan Boolean:")
     a = 24
     b = 69
-    print("a < b =", a < b)
-    print("a > b =", a > b)
-    print("a >= b =", a >= b)
-    print("a <= b =", a <= b)
-    print("a != b =", a != b)
-    print("not (a < b) =", not (a < b))
+    print("a < b  :", a < b)
+    print("a > b  :", a > b)
+    print("a >= b :", a >= b)
+    print("a <= b :", a <= b)
+    print("a != b :", a != b)
+    print("not (a < b) :", not (a < b))
 
 
-def meet2__tabel_kebenaran():
+# Meet 2 - Operasi Logika
+def meet2_operasi_logika():
+    print("Operasi Logika:")
     x = True
-    y = False
+    z = not x
+    print("Nilai dari z =", z)
 
-    print("Program Tabel Kebenaran / Operasi Logika")
-    print("AND:", x and y)
-    print("OR :", x or y)
-    print("XOR:", x != y)
-    print("NOT x:", not x)
+    print("\n** AND ***")
+    print(True, 'and', True, '=', True and True)
+    print(True, 'and', False, '=', True and False)
+    print(False, 'and', True, '=', False and True)
+    print(False, 'and', False, '=', False and False)
+
+    print("\n** XOR ***")
+    print(True, 'xor', True, '=', True != True)
+    print(True, 'xor', False, '=', True != False)
+    print(False, 'xor', True, '=', False != True)
+    print(False, 'xor', False, '=', False != False)
 
 
+# Meet 3 & 4 - Hitung Luas Persegi / Segitiga
 def meet3_hitung_luas():
-    pilihan = input("Ingin menghitung luas persegi atau segitiga? ").lower()
+    pilihan = input("Hitung luas persegi atau segitiga? ").lower()
     if pilihan == "persegi":
         panjang = int(input("Masukkan panjang: "))
         lebar = int(input("Masukkan lebar: "))
@@ -40,27 +50,37 @@ def meet3_hitung_luas():
         luas = 0.5 * alas * tinggi
         print(f"Luas segitiga: {luas}")
     else:
-        print("Pilihan tidak valid")
+        print("Pilihan tidak valid.")
 
 
-def meet4_kalkulator():
-    operasi = input("Operasi (x + - :) : ")
+# Meet 5 - Kalkulator
+def meet5_kalkulator():
+    operasi = input("Operasi (+ - x :) : ")
     bil1 = float(input("Masukkan bilangan pertama: "))
     bil2 = float(input("Masukkan bilangan kedua: "))
 
     if operasi == "+":
-        print("Hasil =", bil1 + bil2)
+        hasil = bil1 + bil2
     elif operasi == "-":
-        print("Hasil =", bil1 - bil2)
+        hasil = bil1 - bil2
     elif operasi == "x":
-        print("Hasil =", bil1 * bil2)
+        hasil = bil1 * bil2
     elif operasi == ":":
-        print("Hasil =", bil1 / bil2)
+        hasil = bil1 / bil2
     else:
-        print("Operasi tidak dikenal")
+        hasil = "Operasi tidak dikenali"
+
+    print("Hasil =", hasil)
 
 
-def meet5_password_checker():
+# Meet 6 - Kondisional Admin
+def meet6_kondisional_admin():
+    hak_akses = "bukan admin"
+    print("full akses" if hak_akses == "admin" else "akses denied")
+
+
+# Meet 7 - Password Checker
+def meet7_password_checker():
     password = input("Masukkan password anda: ")
     if len(password) < 8:
         print("Karakter kurang")
@@ -68,56 +88,61 @@ def meet5_password_checker():
         print("Karakter cukup")
 
 
-def meet6_manipulasi_number():
+# Meet 8 - Manipulasi String Number
+def meet8_manipulasi_number():
     number = "1234567890"
     print("Data terakhir:", number[-1])
     print("Data pertama:", number[0])
     print("Data ke-3 sampai ke-6:", number[2:6])
 
 
-def meet7_pisah_domain():
+# Meet 9 & 10 - Pemisahan Domain
+def meet9_pisah_domain():
     domain_lengkap = input("Masukkan nama domain anda (contoh: cu.net): ")
     if '.' in domain_lengkap:
         nama_domain, ekstensi = domain_lengkap.split(".")
-        print("Nama domain:", nama_domain)
-        print("Ekstensi:", ekstensi)
+        print("Nama domain anda :", nama_domain)
+        print("Domain yg anda gunakan :", ekstensi)
     else:
-        print("Format domain tidak valid")
+        print("Format domain tidak valid.")
 
 
-# MAIN PROGRAM MENU
+# MENU UTAMA
 while True:
-    print("\n######## FINAL PROJECT MENU ########")
-    print("Kelompok:")
+    print("\n##### KELOMPOK #####")
     print("1. Lencana")
     print("2. Kezia")
-    print("#####################################")
-    print("\nDaftar Program:")
-    print("1. Perbandingan Boolean")
-    print("2. Tabel Kebenaran / Logika")
-    print("3. Perhitungan Luas")
-    print("4. Kalkulator Sederhana")
-    print("5. Password Checker")
-    print("6. Manipulasi String Number")
-    print("7. Pemisahan Domain")
-    print("0. Keluar")
+    print("####################\n")
+
+    print("Daftar Program:")
+    print("1. Meet 1 - Perbandingan Boolean")
+    print("2. Meet 2 - Operasi Logika")
+    print("3. Meet 3 & 4 - Perhitungan Luas")
+    print("4. Meet 5 - Kalkulator Sederhana")
+    print("5. Meet 6 - Kondisional Admin")
+    print("6. Meet 7 - Password Checker")
+    print("7. Meet 8 - Manipulasi String Number")
+    print("8. Meet 9 & 10 - Pemisahan Domain")
+    print("0. Keluar Program\n")
 
     pilihan = input("Masukkan nomor program yang ingin dijalankan: ")
 
     if pilihan == "1":
-        meet1_perbandingan_bolean()
+        meet1_perbandingan_boolean()
     elif pilihan == "2":
-        meet2_tabel_kebenaran()
+        meet2_operasi_logika()
     elif pilihan == "3":
         meet3_hitung_luas()
     elif pilihan == "4":
-        meet4_kalkulator()
+        meet5_kalkulator()
     elif pilihan == "5":
-        meet5_password_checker()
+        meet6_kondisional_admin()
     elif pilihan == "6":
-        meet6_manipulasi_number()
+        meet7_password_checker()
     elif pilihan == "7":
-        meet7_pisah_domain()
+        meet8_manipulasi_number()
+    elif pilihan == "8":
+        meet9_pisah_domain()
     elif pilihan == "0":
         print("Program selesai.")
         break
