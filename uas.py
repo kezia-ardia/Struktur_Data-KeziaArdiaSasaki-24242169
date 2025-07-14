@@ -3,10 +3,8 @@
 # 1. Lencana (24241189)
 # 2. Kezia (24241169)
 
-def meet1_tabel_kebenaran():
-    print("Program Tabel Kebenaran / Operasi Logika")
-    x = True
-    y = False
+def meet1_perbandingan_bolean():
+    print("Program Perbandingan (Boolean)")
 
     a = 24
     b = 69
@@ -18,8 +16,11 @@ def meet1_tabel_kebenaran():
     print("not (a < b) =", not (a < b))
 
 
-def meet2_perbandingan_bolean():
-    print("Program Perbandingan (Boolean)")
+def meet2__tabel_kebenaran():
+    x = True
+    y = False
+
+    print("Program Tabel Kebenaran / Operasi Logika")
     print("AND:", x and y)
     print("OR :", x or y)
     print("XOR:", x != y)
@@ -92,8 +93,8 @@ while True:
     print("2. Kezia")
     print("#####################################")
     print("\nDaftar Program:")
-    print("1. Tabel Kebenaran / Logika")
-    print("2. Perbandingan Boolean")
+    print("1. Perbandingan Boolean")
+    print("2. Tabel Kebenaran / Logika")
     print("3. Perhitungan Luas")
     print("4. Kalkulator Sederhana")
     print("5. Password Checker")
@@ -104,9 +105,9 @@ while True:
     pilihan = input("Masukkan nomor program yang ingin dijalankan: ")
 
     if pilihan == "1":
-        meet1_tabel_kebenaran()
+        meet1_perbandingan_bolean()
     elif pilihan == "2":
-        meet2_perbandingan_bolean()
+        meet2_tabel_kebenaran()
     elif pilihan == "3":
         meet3_hitung_luas()
     elif pilihan == "4":
